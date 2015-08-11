@@ -3,6 +3,7 @@ source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.3'
+gem 'mechanize'
 # Use postgresql as the database for Active Record
 gem 'pg'
 # Use SCSS for stylesheets
@@ -58,5 +59,6 @@ group :development do
 
   # let's you use binding.pry
   gem 'pry', '~> 0.10.1'
+
 end
 

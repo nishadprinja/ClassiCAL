@@ -7,7 +7,7 @@ class CreateProfessors < ActiveRecord::Migration
     	t.integer :helpfulness
     	t.integer :clarity
     	t.integer :easiness
-    	t.string :studentRating
+    	t.string :student_rating
     end
   end
 end

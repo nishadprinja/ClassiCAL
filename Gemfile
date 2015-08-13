@@ -64,8 +64,6 @@ group :development do
   gem 'backbars'
 
   gem 'pry-rails'
-
-  gem 'devise'
   
   gem "rails-assets-underscore", source: "https://rails-assets.org"
   gem "rails-assets-backbone", source: "https://rails-assets.org"

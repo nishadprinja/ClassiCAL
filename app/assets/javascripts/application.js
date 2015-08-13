@@ -13,4 +13,23 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
-//= require_tree .
+//= require application.js
+//= require underscore
+//= require backbone
+//= require collections/courses.js
+
+var App = {
+	Views: {},
+	Collections: {},
+	Models: {}
+};
+
+$(function(){
+	console.log('luls this shit works XD')
+	var courses = new App.Collections.Courses;
+	courses.fetch({
+		success: function (data) {
+			console.log(data);
+		}
+	});
+});

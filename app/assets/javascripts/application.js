@@ -14,6 +14,7 @@
 //= require jquery-ui.custom.min
 //= require jquery_ujs
 //= require turbolinks
+<<<<<<< HEAD
 //= require underscore
 //= require backbone
 //= require handlebars
@@ -34,3 +35,25 @@ var App = {
 	Views: {}, 
 	Routers: {}
 };
+=======
+//= require application.js
+//= require underscore
+//= require backbone
+//= require collections/courses.js
+
+var App = {
+	Views: {},
+	Collections: {},
+	Models: {}
+};
+
+$(function(){
+	console.log('luls this shit works XD')
+	var courses = new App.Collections.Courses;
+	courses.fetch({
+		success: function (data) {
+			console.log(data);
+		}
+	});
+});
+>>>>>>> 348a305d225d9bfc1d6222aa1f29b6756c77635c

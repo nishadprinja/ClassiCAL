@@ -68,3 +68,6 @@ group :development do
   gem "rails-assets-backbone", source: "https://rails-assets.org"
 end
 
+
+gem 'rails-assets-underscore', source: 'https://rails-assets.org'
+gem 'rails-assets-backbone', source: 'https://rails-assets.org'

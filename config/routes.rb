@@ -1,10 +1,15 @@
 Rails.application.routes.draw do
     root to: 'application#index' #!!!!want to root to user login page!!!!
+    	#or should it root to 'users#new'
     resources :courses, only: [:index]  
-    # resources :users, only: [:index, :update, :create, :destroy]
     resources :calendars, only: [:index, :update, :create, :destroy]
     resources :departments, only: [:index, :create, :destroy]
-    
+
+    resources :users, only: [:new, :create, :show, :destroy]
+
+    get 'sessions/new' => 'sessions#new'
+    post 'sessions' => 'sessions#create'
+    delete 'sessions' => 'sessions#destroy'
 end
 
 

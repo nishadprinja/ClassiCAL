@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150812181010) do
+ActiveRecord::Schema.define(version: 20150813195800) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -23,11 +23,11 @@ ActiveRecord::Schema.define(version: 20150812181010) do
     t.integer  "professor_id"
     t.string   "location"
     t.string   "day"
-    t.datetime "time_start"
-    t.datetime "time_end"
     t.text     "summary"
     t.integer  "paired_course_id"
     t.boolean  "online"
+    t.datetime "time_start"
+    t.datetime "time_end"
   end
 
   create_table "courses_materials", id: false, force: :cascade do |t|
@@ -36,10 +36,8 @@ ActiveRecord::Schema.define(version: 20150812181010) do
   end
 
   create_table "courses_professors", id: false, force: :cascade do |t|
-    t.integer "course_id",     null: false
-    t.integer "professor_id",  null: false
-    t.integer "courses_id"
-    t.integer "professors_id"
+    t.integer "course_id"
+    t.integer "professor_id"
   end
 
   create_table "departments", force: :cascade do |t|
@@ -70,6 +68,15 @@ ActiveRecord::Schema.define(version: 20150812181010) do
   create_table "user_courses", force: :cascade do |t|
     t.integer "course_id"
     t.integer "user_id"
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string  "student_name"
+    t.string  "username"
+    t.integer "graduation_year"
+    t.integer "major_id"
+    t.integer "minor_id"
+    t.string  "password_digest"
   end
 
 end

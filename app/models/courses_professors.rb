@@ -1,4 +1,4 @@
-class CourseProfessor < ActiveRecord::Base
+class CoursesProfessors < ActiveRecord::Base
 	belongs_to :course
 	belongs_to :professor
 end

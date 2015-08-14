@@ -1,10 +1,10 @@
 class CreateCourses < ActiveRecord::Migration
   def change
-    create_table :courses do |t| #rails knows to name this table items because you told it to
+    create_table :courses do |t| 
     	t.string :course_name							
-    	t.references :department
-    	t.string :course_number
-    	t.references :professor
+    	t.references :department 
+    	t.string :course_number 
+    	t.string :professor
     	t.string :location
         t.string :day
     	t.datetime :time_start

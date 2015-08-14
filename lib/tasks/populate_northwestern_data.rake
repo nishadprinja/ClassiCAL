@@ -55,13 +55,13 @@ namespace :populate_northwestern_data do
 
 	                                	# SPLITTING meetingInfo INTO BITS
 	                                	new_location = meetingInfo.split
-									    days = new_location[-4]
-									    ttime_start = new_location[-3]
-									    ttime_end = new_location[-1]  
-										    actual_location = new_location
-										    actual_location.slice!(-5..-1)
-										    geo_location = actual_location.join(' ')
-										    geo_location
+              									    days = new_location[-4]
+              									    ttime_start = new_location[-3]
+              									    ttime_end = new_location[-1]  
+            										    actual_location = new_location
+            										    actual_location.slice!(-5..-1)
+            										    geo_location = actual_location.join(' ')
+            										    geo_location
 
                                 # SHOVING INTO DATABASE // COURSES
                                 c = Course.new

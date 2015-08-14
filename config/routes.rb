@@ -4,8 +4,5 @@ Rails.application.routes.draw do
     # resources :users, only: [:index, :update, :create, :destroy]
     resources :calendars, only: [:index, :update, :create, :destroy]
     resources :departments, only: [:index, :create, :destroy]
-    
+    resources :professors, only: [:index, :create, :destroy]
 end
-
-
-

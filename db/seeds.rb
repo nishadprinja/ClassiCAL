@@ -7,28 +7,23 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 # require 'ffaker'
 
-# 5.times do 
-#     Department.create({department_name: FFaker::Job.title})
-# end 
+User.create({
+	first_name: "Rachelle",
+	last_name: "Faroul",
+	username: "rfaroul",
+	graduation_year: 2019
+})
 
-# 5.times do 
-#     Professor.create({name: FFaker::Name.name, overall_quality: 5, average_grade: 5, helpfulness: 5, clarity: 5, easiness: 5, student_rating: 5})
-# end
+User.create({
+	first_name: "Simone",
+	last_name: "Sobers",
+	username: "soberss",
+	graduation_year: 2018
+})
 
-# 5.times do 
-#     Material.create({name: FFaker::Product.product, cost: FFaker::PhoneNumber.area_code, link: FFaker::Internet.http_url})
-# end
-
-# 5.times do
-#     Prerequisite.create({course_id: nil, linked_course_id: nil})
-# end
-
-# 5.times do
-#     UserCourse.create({course_id: nil, user_id: nil})
-# end
-
-# 5.times do
-#     Course.create({course_name: FFaker::Education.degree, department_id: nil, course_number: 2, professor_id: nil, location: FFaker::AddressNL.street_address, day: FFaker::Time.date, time_start: '2:00', time_end: '3:20', summary: FFaker::Education.degree, paired_course_id: nil, online: FFaker::Boolean.random})
-# end
-
-
+User.create({first_name: "Grace",
+	last_name: "Hackett",
+	username: "ghackett",
+	graduation_year: 2017
+})
+binding.pry

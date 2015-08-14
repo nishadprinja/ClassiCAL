@@ -1,0 +1,26 @@
+<div class="form">
+<h1>Not a Member Yet?</h1>
+  <%= form_for @user do |f| %>
+  <%= f.label :first_name%><br>
+  <%= f.text_field :first_name%><br>
+
+  <%= f.label :last_name%><br>
+  <%= f.text_field :last_name%><br>
+
+  <%= f.label :graduation_year%><br>
+  <%= f.text_field :graduation_year%><br>
+
+  <%= f.label :username%><br>
+  <%= f.text_field :username%><br>
+
+  <%= f.label :password %><br>
+  <%= f.password_field :password %><br>
+
+  <!-- what to call here to get major and minor? -->
+
+  <%= f.label :password_confirmation %><br>
+  <%= f.password_field :password_confirmation %><br>
+  <br>
+  <%= f.submit "Create a new account"%><br>
+  <% end %>
+</div>

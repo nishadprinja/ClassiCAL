@@ -2,13 +2,13 @@ class CreateCourses < ActiveRecord::Migration
   def change
     create_table :courses do |t| 
     	t.string :course_name							
-    	t.references :department #foreign key reference to departments table
+    	t.references :department 
     	t.string :course_number 
-    	t.references :professor
+    	t.string :professor
     	t.string :location
         t.string :day
-    	t.string :time_start
-    	t.string :time_end
+    	t.datetime :time_start
+    	t.datetime :time_end
     	t.text :summary
     	t.integer :paired_course_id
     	t.boolean :online

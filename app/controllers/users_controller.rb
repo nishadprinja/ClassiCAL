@@ -10,7 +10,7 @@ before_action :authenticate, except: [:new, :create]
 		@user = User.new(user_params)
 		if @user.save  
 			session[:current_user_id] = @user.id
-			redirect_to artists_path
+			redirect_to user_path
 		end
 		redirect_to new_user_path
 	end

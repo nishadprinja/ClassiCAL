@@ -1,7 +1,8 @@
 class CreateUsers < ActiveRecord::Migration
   def change
     create_table :users do |t|
-    	t.string :student_name
+    	t.string :first_name
+        t.string :last_name
     	t.string :username
     	t.integer :graduation_year
     	t.integer :major_id
@@ -10,6 +11,3 @@ class CreateUsers < ActiveRecord::Migration
     end
   end
 end
-
-# (user.calendars = course they've taken)
-

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150813195800) do
+ActiveRecord::Schema.define(version: 20150813205132) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -20,24 +20,19 @@ ActiveRecord::Schema.define(version: 20150813195800) do
     t.string   "course_name"
     t.integer  "department_id"
     t.string   "course_number"
-    t.integer  "professor_id"
+    t.string   "professor"
     t.string   "location"
     t.string   "day"
+    t.datetime "time_start"
+    t.datetime "time_end"
     t.text     "summary"
     t.integer  "paired_course_id"
     t.boolean  "online"
-    t.datetime "time_start"
-    t.datetime "time_end"
   end
 
   create_table "courses_materials", id: false, force: :cascade do |t|
     t.integer "course_id"
     t.integer "material_id"
-  end
-
-  create_table "courses_professors", id: false, force: :cascade do |t|
-    t.integer "course_id"
-    t.integer "professor_id"
   end
 
   create_table "departments", force: :cascade do |t|
@@ -55,23 +50,14 @@ ActiveRecord::Schema.define(version: 20150813195800) do
     t.integer "linked_course_id"
   end
 
-  create_table "professors", force: :cascade do |t|
-    t.string  "name"
-    t.string  "overall_quality"
-    t.integer "average_grade"
-    t.integer "helpfulness"
-    t.integer "clarity"
-    t.integer "easiness"
-    t.string  "student_rating"
-  end
-
   create_table "user_courses", force: :cascade do |t|
     t.integer "course_id"
     t.integer "user_id"
   end
 
   create_table "users", force: :cascade do |t|
-    t.string  "student_name"
+    t.string  "first_name"
+    t.string  "last_name"
     t.string  "username"
     t.integer "graduation_year"
     t.integer "major_id"

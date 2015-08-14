@@ -1,0 +1,8 @@
+<div id="user-page">
+<h1>Hope your having a great day <%= @user.username%></h1><br>
+
+<h1>If you want to delete your account click below. All of your course data will be deleted when you click below. Be ye warned.</h1><br><br>
+
+<%=button_to 'DELETE', @user, :method => :delete %>
+
+</div>

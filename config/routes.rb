@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-    root to: 'application#index' #!!!!want to root to user login page!!!!
+    root to: "users#new" #!!!!want to root to user login page!!!!
     	#or should it root to 'users#new'
     resources :courses, only: [:index]  
     resources :calendars, only: [:index, :update, :create, :destroy]

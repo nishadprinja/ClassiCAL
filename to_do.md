@@ -1,7 +1,4 @@
-
-fix the columns with null values in schema.rb file
-fix id's
-
+strptime for database time_start and time_end datetime 
 
 1. put in rake task
 def format_string_date da
@@ -10,14 +7,7 @@ def format_string_date da
         end
     end
 
-that is what I wrote to
-parse a string into a datetime
-instead of current_user.detail.time_zone
-do the central time zone
-
-which i have to find
-and 'da' is the time string
-that you want to turn into a time
+that is what I wrote to parse a string into a datetime. And instead of current_user.detail.time_zone, do the central time zone, which i have to find. And 'da' is the time string that you want to turn into a time
 
 
 
@@ -39,7 +29,16 @@ need to tell sessions that user is a google user
 
 
 THURSDAY DONE:
+
+fix the columns with null values in schema.rb file
+fix id's
+
+remove course_professor join table 
+
+change professor_id to professor in courses table
+
 changed datetime to string
+changed string back to datetime
 deleted rachelle.md file
 
 

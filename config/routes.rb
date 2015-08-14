@@ -7,9 +7,12 @@ Rails.application.routes.draw do
 
     resources :users, only: [:new, :create, :show, :destroy]
 
-    get 'sessions/new' => 'sessions#new'
-    post 'sessions' => 'sessions#create'
-    delete 'sessions' => 'sessions#destroy'
+    #these are the signup routes. 
+    get 'sessions/new' => 'sessions#new' #renders a form in the browser
+    post 'sessions' => 'sessions#create' #receives the form and creates a user in the database with inputs
+    delete 'sessions' => 'sessions#destroy' #logs the user out of the program
+
+
 end
 
 

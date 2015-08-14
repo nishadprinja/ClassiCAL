@@ -6,6 +6,7 @@ before_action :authenticate, except: [:new, :create]
     	@user = User.new
   	end
 
+
 	def create
 		@user = User.new(user_params)
 		if @user.save  
@@ -15,16 +16,16 @@ before_action :authenticate, except: [:new, :create]
 		redirect_to new_user_path
 	end
 
-  	def show
-    	@user = User.find(params[:id])
-  	end
+ #  	def show
+ #    	@user = User.find(params[:id])
+ #  	end
 
-  	def destroy
-	    @user = User.find(params[:id])
-	    session[:current_user_id] = nil
-	    @user.destroy
-	    redirect_to root_path
-	end
+ #  	def destroy
+	#     @user = User.find(params[:id])
+	#     session[:current_user_id] = nil
+	#     @user.destroy
+	#     redirect_to root_path
+	# end
 
   private
 
@@ -32,8 +33,8 @@ before_action :authenticate, except: [:new, :create]
     params.require(:user).permit(:student_name, :username, :graduation_year, :password, :password_confirmation) #do we need the foreign keys here?
   end
 
-
-
+#TO DO:
+#if student is junior or senior, they must enter a major_id
 
 
 

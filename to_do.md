@@ -1,3 +1,5 @@
+do I need sqlite3 gem for sessions?
+
 strptime for database time_start and time_end datetime 
 
 1. put in rake task

@@ -4,6 +4,7 @@ class User < ActiveRecord::Base
 	validates :last_name, presence: true, uniqueness: true
 	validates :username, presence: true, uniqueness: true
 	validates :graduation_year, presence: true
+	validates :password_digest, presence: true #add minimum length 
 
  	has_secure_password
 

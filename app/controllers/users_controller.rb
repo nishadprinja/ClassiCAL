@@ -2,18 +2,21 @@
 class UsersController < ApplicationController
 
 before_action :authenticate, except: [:new, :create]
-	def new
+
+	def new 				#renders the signup form
     	@user = User.new
   	end
 
 
-	def create
+	def create				#receives the form and creates a user with the form's parameters
 		@user = User.new(user_params)
 		if @user.save  
 			session[:current_user_id] = @user.id
-			redirect_to user_path
+			redirect_to '/', notice: 'Account created successfully' #root path is the login page
+		else
+			flash[:error] = 'Username or password is incorrect'
+			redirect_to '/signup' # 'users#new' path
 		end
-		redirect_to new_user_path
 	end
 
  #  	def show

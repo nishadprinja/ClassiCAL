@@ -1,6 +1,8 @@
 class UserCourseController < ApplicationController
 
 	#this shows everyone's calendar
+	
+	
 	def index	
 		render json: User_Course.where(:user_id => current_user.id)
 	end

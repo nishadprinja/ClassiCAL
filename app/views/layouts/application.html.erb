@@ -7,10 +7,14 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+	
 	<h1>ClassiCAL</h1>
 	
-	<p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+	<div>
+		<p class="notice"><%= notice %></p>
+    	<p class="alert"><%= alert %></p>
+	</div>
+	
 
     <div id='wrap'>
 
@@ -32,6 +36,14 @@
 		<div style='clear:both'></div>
 
 	</div>
+
+	<% if current_user %>
+		Signed in as <%= current_user.username %> | <%= link_to 'Logout', '/logout' %>
+		<% else %>
+			<%= link_to 'Login', '/login' %> | <%= link_to 'Sign Up', '/signup' %>
+		<% end %>
+
+		<%= yield %>
 
 </body>
 </html>

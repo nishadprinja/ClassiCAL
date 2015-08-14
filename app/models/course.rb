@@ -6,6 +6,7 @@ class Course < ActiveRecord::Base
 	belongs_to :calendar #is this correct? or should it be has_many :calendars ??
 	has_many :materials
 	belongs_to :users
+	
 end
 
 

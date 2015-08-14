@@ -86,14 +86,21 @@ namespace :populate_northwestern_data do
                                   end
 
                                   c.summary = overviewOfClass
-                                  c.save
+                                  
 
                                   # SHOVING INTO DATABASE // DEPARTMENTS
-                                  d = Department.new 
-                                  d.department_name = department
-                                  d.save
+                                  d = Department.find_by_department_name(department)
+                                  if !(d)
+
+                                    d = Department.new 
+                                    d.department_name = department
+                                    d.save
+                                  end
+                                  c.department_id = d.id
+                                  c.save
                                 end
 
+ 
                                 # puts class_name
                                 # puts instructors
                                 # puts meetingInfo

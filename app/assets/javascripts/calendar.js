@@ -52,10 +52,11 @@ $('#external-events .fc-event').each(function() {
         $.getJSON( '/deptcourses/' + id, function(data) {
 	        $.each(data, function () {
 	            createDiv += '<div class="fc-event" data–courseid="' + this.id + '">'
-	            createDiv += 'Course: ' + this.course_name + '<br> <br>' 
-	            createDiv += 'Professor: ' + this.professor + '<br> <br>'
-	            createDiv += 'Location: ' + this.location + '<br> <br>'
-	            createDiv += 'Time: ' + this.time_start + ' - ' + this.time_end + '</div>'
+	            createDiv += this.course_name + '<br> <br>' 
+	            createDiv += this.professor + '<br> <br>'
+	            createDiv += this.location + '<br> <br>'
+	            createDiv += this.day + '<br> <br>'
+	            createDiv += this.time_start + ' - ' + this.time_end + '</div>'
 	        });
 	            $('#courses').append(createDiv)
 

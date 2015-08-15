@@ -1,0 +1,59 @@
+    <div id='wrap'>
+
+		<div id='external-events'>
+			<h4>Draggable Events</h4>
+			<select id="dept-select">
+			<% @departments.each do |department| %>
+				<option value="<%=department.id%>"> <%=department.department_name%> </option>
+			<% end %>
+			</select>
+			<% @courses.each do |course| %>
+				<div class='fc-event' data-courseid='<%= course.id %>'> 
+				Course: <%= course.course_name %>
+				</div>
+			<% end %>
+			<div class='fc-event'>My Event 1</div>
+			<p>
+				<input type='checkbox' id='drop-remove' />
+				<label for='drop-remove'>remove after drop</label>
+			</p>
+		</div>
+
+		<div id='calendar'></div>
+
+		<div style='clear:both'></div>
+
+	</div>
+
+	<script>
+		// after you drag the course into the calendar 
+			//you need something on that div to tell you that it belongs to the user OR you need some kind of array in the javascript to store all the course ids that the user has put into the calendar 
+
+			// when the user clicks save -  you're going to submit these courses  to the userscourse controller
+			// $(this).data('courseid')
+
+		$(function(){
+			$('#dept-select').on('change', function () {
+				var id = $(this).val();
+				$.getJSON( '/deptcourses/' + id, function( data ) {
+					debugger;
+	            //Object {id: 1, name: "Drew Brees", handSizeInches: 10, created_at: "2015-08-03T15:02:10.751Z", updated_at: "2015-08-03T15:02:10.751Z"}
+
+	            // For each item in our JSON, add a table row and cells to the content string
+	            // $.each(data, function(){
+	            //     tableContent += '<tr>';
+	            //     tableContent += '<td>' + this.name + '</td>';
+	            //     tableContent += '<td>' + this.handSizeInches + '</td>';
+	            //     tableContent += '<td><a href="#" class="linkEditPlayer" data-id="' + this.id + '">edit</a></td>';
+	            //     tableContent += '<td><a href="#" class="linkDeletePlayer" data-id="' + this.id + '">delete</a></td>';
+	            //     tableContent += '</tr>';
+	            // });
+
+	            // Inject the whole content string into our existing HTML table
+	        });
+	    });
+			
+
+		});
+	</script>
+

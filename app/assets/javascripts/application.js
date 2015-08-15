@@ -14,7 +14,6 @@
 //= require jquery-ui.custom.min
 //= require jquery_ujs
 //= require turbolinks
-<<<<<<< HEAD
 //= require underscore
 //= require backbone
 //= require handlebars
@@ -29,13 +28,6 @@
 //= require_tree ./templates
 //= require_tree ../../../vendor/assets/javascripts
 //= require_tree .
-var App = {
-	Models: {}, 
-	Collections: {}, 
-	Views: {}, 
-	Routers: {}
-};
-=======
 //= require application.js
 //= require underscore
 //= require backbone
@@ -56,4 +48,3 @@ $(function(){
 		}
 	});
 });
->>>>>>> 348a305d225d9bfc1d6222aa1f29b6756c77635c

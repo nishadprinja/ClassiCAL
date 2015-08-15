@@ -3,18 +3,18 @@ class ApplicationController < ActionController::Base
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
   
-  # def index
-  # 	render layout: 'application', text: ''
+  def index
+  	render layout: 'application', text: ''
+  end
+
+  # def authorize
+  #   redirect_to '/login' unless current_user
   # end
 
-  def authorize
-    redirect_to '/login' unless current_user
-  end
-
-  def current_user
-    @current_user ||= User.find(session[:current_user_id]) if session[:current_user_id]
-  end
-  helper_method :current_user #the helper method lets us use @current_user in our view files
+  # def current_user
+  #   @current_user ||= User.find(session[:current_user_id]) if session[:current_user_id]
+  # end
+  # helper_method :current_user #the helper method lets us use @current_user in our view files
 
 end
 

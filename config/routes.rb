@@ -1,14 +1,13 @@
 Rails.application.routes.draw do
-    root to: "sessions#new" #!!!!want to root to user login page!!!!
+    # root to: "sessions#new" #!!!!want to root to user login page!!!!
+    root to: "courses#index"
 
-    resources :courses, only: [:index]  
-    resources :calendars, only: [:index, :update, :create, :destroy]
-    resources :departments, only: [:index, :create, :destroy]
+    resources :courses, only: [:index]
+    get '/deptcourses/:id' => 'courses#department_courses', as: 'deptcourses'
 
-    resources :users, only: [:new, :create, :show, :destroy]
+    # resources :users, only: [:new, :create, :show, :destroy]
 
     #these are the signup routes. 
-    
     get '/signup' => 'users#new'
     post 'users' => 'users#create'
 
@@ -21,3 +20,5 @@ end
 
 
 
+    # resources :calendars, only: [:index, :update, :create, :destroy]
+    # resources :departments, only: [:index, :create, :destroy]

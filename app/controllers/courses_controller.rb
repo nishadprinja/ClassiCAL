@@ -1,8 +1,13 @@
 class CoursesController < ApplicationController
 
-	before_filter :authorize
 	def index
-		render json: Course.all 
+		@courses = Course.all
+		@departments = Department.all
+	end
+
+	def department_courses
+		d = Department.find(params[:id])
+		render json: d.courses
 	end
 
 	#want to add courses to calendar

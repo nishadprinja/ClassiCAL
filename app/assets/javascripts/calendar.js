@@ -41,33 +41,40 @@ $('#external-events .fc-event').each(function() {
 		}
 	});
 
+	// FINDS CHANGE IN SELECT, LOADS CONSEQEUNT COURSES AS EVENTS
+	// -----------------------------------------------------------------
 	$('#dept-select').on('change', function () {
-            var id = $(this).val();
-            var createDiv = '';
-            $.getJSON( '/deptcourses/' + id, function( data ) {
+		$('#courses').empty();
+        var id = $(this).val();
+        var createDiv = '';
 
-            $.each(data, function () {
-                createDiv += '<div class="fc-event" data–courseid="' + this.id + '">'
-                createDiv += 'Course:' + this.course_name + '</div>'
-            });
-                $('#external-events').append(createDiv)
+        // ACTUAL SINGLE COURSE DIV
+        $.getJSON( '/deptcourses/' + id, function(data) {
+	        $.each(data, function () {
+	            createDiv += '<div class="fc-event" data–courseid="' + this.id + '">'
+	            createDiv += 'Course: ' + this.course_name + '<br> <br>' 
+	            createDiv += 'Professor: ' + this.professor + '<br> <br>'
+	            createDiv += 'Location: ' + this.location + '<br> <br>'
+	            createDiv += 'Time: ' + this.time_start + ' - ' + this.time_end + '</div>'
+	        });
+	            $('#courses').append(createDiv)
 
-	    $('#external-events .fc-event').each(function() {
+				    $('#external-events .fc-event').each(function() {
 
-			// store data so the calendar knows to render an event upon drop
-			$(this).data('event', {
-				title: $.trim($(this).text()), // use the element's text as the event title
-				stick: true // maintain when user navigates (see docs on the renderEvent method)
-			});
+						// store data so the calendar knows to render an event upon drop
+						$(this).data('event', {
+							title: $.trim($(this).text()), // use the element's text as the event title
+							stick: true // maintain when user navigates (see docs on the renderEvent method)
+						});
 
-			// make the event draggable using jQuery UI
-			$(this).draggable({
-				zIndex: 999,
-				revert: true,      // will cause the event to go back to its
-				revertDuration: 0  //  original position after the drag
-			});
+						// make the event draggable using jQuery UI
+						$(this).draggable({
+							zIndex: 999,
+							revert: true,      // will cause the event to go back to its
+							revertDuration: 0  //  original position after the drag
+						});
 
-		});
+					});
             //Object {id: 1, name: "Drew Brees", handSizeInches: 10, created_at: "2015-08-03T15:02:10.751Z", updated_at: "2015-08-03T15:02:10.751Z"}
 
             // For each item in our JSON, add a table row and cells to the content string

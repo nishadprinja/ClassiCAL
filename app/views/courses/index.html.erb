@@ -1,32 +1,39 @@
+<!-- MAIN PAGE -->
 <div id='wrap'>
 
+	<!-- LEFT COLUMN, CONTAINS THE SELECT & DRAGABLE EVENTS -->
 	<div id='external-events'>
 		<h4>Draggable Events</h4>
-		<select id="dept-select">
-		<% @departments.each do |department| %>
-			<option value="<%=department.id%>"> <%=department.department_name%> </option>
-		<% end %>
-		</select>
-		<div class='fc-event'>My Event 1</div>
-		<p>
-			<input type='checkbox' id='drop-remove' />
-			<label for='drop-remove'>remove after drop</label>
-		</p>
-	</div>
 
-	<div id='calendar'></div>
+			<!-- DEPARTMENT SELECT MENU -->
+			<select id="dept-select">
+			<% @departments.each do |department| %>
+				<option value="<%=department.id%>"> <%=department.department_name%> </option>
+			<% end %>
+			</select>
 
-	<div style='clear:both'></div>
+				<!-- DIV WHERE COURSES ACTUALLY POPULATE -->
+				<div id="courses"></div>				
 
+					<!-- DUMMY EVENT W/CHECK-BOX -->
+					<div class='fc-event'>My Event 1</div>
+						<p>
+							<input type='checkbox' id='drop-remove' />
+							<label for='drop-remove'>remove after drop</label>
+						</p>
+					</div>
+
+						<!-- ACTUAL CALENDAR -->
+						<div id='calendar'></div>
+						<div style='clear:both'></div>
 </div>
 
-<script>
-	// after you drag the course into the calendar 
-	    //you need something on that div to tell you that it belongs to the user OR you need some kind of array in the javascript to store all the course ids that the user has put into the calendar 
 
-	    // when the user clicks save -  you're going to submit these courses  to the userscourse controller
-	    // $(this).data('courseid')
-	// $(function () { 
-	// });
-</script>
+<!-- after you drag the course into the calendar 
+    you need something on that div to tell you that it belongs to the user OR you need some kind of array in the javascript to store all the course ids that the user has put into the calendar 
 
+    when the user clicks save -  you're going to submit these courses  to the userscourse controller
+    $(this).data('courseid')
+$(function () { 
+});
+-->

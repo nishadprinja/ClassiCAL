@@ -3,15 +3,57 @@
 <head>
   <title>ClassiCALApp</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
+  <!-- what is all this shit? -->
 </head>
-<body>
-	<h1>ClassiCAL</h1>
+
+<body class="body-style">
+	<div class="header"></div>
+	<div class="footer"></div>
+	<div class="little-line"></div>
+	<div class="black-box">
+		<p><b>Plan a semester you can see, with tools that make sense</b></p>
+	</div>
+
+
+
 	
-	<p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
-<%= yield %>
+
+
+	
+	<!-- <div>
+		<p class="notice"><%= notice %></p>
+    	<p class="alert"><%= alert %></p>
+	</div> -->
+	
+
+    <div id='wrap'>
+    	<% if session[:current_user_id] %>
+		<div id='external-events'>
+			<h4>Draggable Events</h4>
+			<div class='fc-event'>My Event 1</div>
+			<div class='fc-event'>My Event 2</div>
+			<div class='fc-event'>My Event 3</div>
+			<div class='fc-event'>My Event 4</div>
+			<div class='fc-event'>My Event 5</div>
+			<p>
+				<input type='checkbox' id='drop-remove' />
+				<label for='drop-remove'>remove after drop</label>
+			</p>
+		</div>
+
+		<div id='calendar'></div>
+
+		<div style='clear:both'></div>
+	<% end %>
+	</div>
+
+	<% if current_user %>
+		Signed in as <%= current_user.username %> | <%= link_to 'Logout', '/logout' %>
+		<% else %>
+			<%= link_to 'Login', '/login' %> | <%= link_to 'Sign Up', '/signup' %>
+		<% end %>
+
+		<%= yield %>
 
 </body>
 </html>

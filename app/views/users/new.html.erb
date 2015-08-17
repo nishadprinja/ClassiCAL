@@ -1,6 +1,21 @@
+<!-- users view folder will provide functionality to sign up for classiCAL -->
+
 <div class="form">
-<h1>Not a Member Yet?</h1>
-  <%= form_for @user do |f| %>
+<h1>Haven't joined ClassiCAL yet? Sign up here!</h1>
+  <%= form_for (@user) do |f| %>
+
+  <% if @user.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
+
+      <ul>
+      <% @user.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
   <%= f.label :first_name%><br>
   <%= f.text_field :first_name%><br>
 
@@ -18,9 +33,13 @@
 
   <!-- what to call here to get major and minor? -->
 
-  <%= f.label :password_confirmation %><br>
+  <%= f.label 'confirm your password' %><br>
   <%= f.password_field :password_confirmation %><br>
   <br>
-  <%= f.submit "Create a new account"%><br>
+  <%= f.submit "Submit"%><br>
+  
   <% end %>
 </div>
+
+
+<!-- add a field to add major with drop down of all departments plus one for 'undecided' -->

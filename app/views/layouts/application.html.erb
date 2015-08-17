@@ -8,6 +8,12 @@
 </head>
 <body>
 	
+	<% if current_user %>
+	Signed in as <%= current_user.username %> | <%= link_to 'Logout', '/logout', method: :delete %>
+	<% else %>
+		<%= link_to 'Login', '/login' %> | <%= link_to 'Sign Up', '/signup' %>
+	<% end %>
+
 	<%= yield %>
 
 </body>

@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
     # root to: "sessions#new" #!!!!want to root to user login page!!!!
-    root to: "courses#index"
+    root to: "sessions#new"
 
     resources :courses, only: [:index]
     get '/deptcourses/:id' => 'courses#department_courses', as: 'deptcourses'

@@ -33,7 +33,7 @@ before_action :authenticate, except: [:new, :create]
   private
 
   def user_params
-    params.require(:user).permit(:student_name, :username, :graduation_year, :password, :password_confirmation) #do we need the foreign keys here?
+    params.require(:user).permit(:first_name, :last_name, :username, :graduation_year, :password, :password_confirmation) #do we need the foreign keys here?
   end
 
 #TO DO:

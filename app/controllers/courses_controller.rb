@@ -1,5 +1,7 @@
 class CoursesController < ApplicationController
 
+before_filter :authorize
+
 	def index
 		@courses = Course.all
 		@departments = Department.all

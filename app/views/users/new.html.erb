@@ -2,7 +2,7 @@
 
 <div class="form">
 <h1>Haven't joined ClassiCAL yet? Sign up here!</h1>
-  <%= form_for :user, url: '/users' do |f| %>
+  <%= form_for @user do |f| %>
 
   <%= f.label :first_name%><br>
   <%= f.text_field :first_name%><br>

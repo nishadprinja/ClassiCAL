@@ -1,9 +1,5 @@
 class SessionsController < ApplicationController
 
-	# def new
-		
-	# end
-
 	def create
 		#look in the 'username' column of the 'users' table
 		user = User.find_by(username: params[:username])

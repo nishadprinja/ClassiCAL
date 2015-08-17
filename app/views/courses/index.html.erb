@@ -1,3 +1,10 @@
+<% if session[:current_user_id] %>
+	<div class="header"></div>
+	<div class="footer"></div>
+	<div class="little-line"></div>
+	<div class="black-box">
+		<p><b>Plan a semester you can see, with tools that make sense</b></p>
+	</div>
 <!-- MAIN PAGE -->
 <div id='wrap'>
 
@@ -27,7 +34,11 @@
 						<div id='calendar'></div>
 						<div style='clear:both'></div>
 </div>
+<% end %>
 
+	
+
+  
 
 <!-- after you drag the course into the calendar 
     you need something on that div to tell you that it belongs to the user OR you need some kind of array in the javascript to store all the course ids that the user has put into the calendar 

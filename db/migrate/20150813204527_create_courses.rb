@@ -7,8 +7,8 @@ class CreateCourses < ActiveRecord::Migration
     	t.string :professor
     	t.string :location
         t.string :day
-    	t.datetime :time_start
-    	t.datetime :time_end
+    	t.string :time_start
+    	t.string :time_end
     	t.text :summary
     	t.integer :paired_course_id
     	t.boolean :online

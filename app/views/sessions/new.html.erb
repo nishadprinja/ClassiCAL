@@ -1,9 +1,22 @@
-<h1>Login</h1>
+<body id='login-background'>
+	<div id='top-bar'>
+		<div id='top-logo'></div>
+		<div id='login-box'>
+			<%= form_tag '/login' do %>
+				<div id='username'><%= text_field_tag :username, :attr, :placeholder => "Username" %></div>  
+				<div id='password'><%= password_field_tag :password, :attr, :placeholder => "Password"%></div>
+				<div id='submit-login'> <%= submit_tag "Login", :class => "login-button"  %></div>
+			<% end %>
+		</div>
 
-<%= form_tag '/login' do %>
-	Username: <%= text_field_tag :username %>
-	Password: <%= password_field_tag :password %>
-	<%= submit_tag "Submit" %>
+		<div id='slogan'></div>
 
-<% end %>
-
+		<div id='signup-box'>
+			<% if current_user %>
+				Signed in as <%= current_user.username %> | <%= link_to 'Logout', '/logout', method: :delete %>
+			<% else %>
+				<div id='signup-button'><%= link_to 'Sign Up', '/signup', :class=> "signupp" %></div>	
+			<% end %>
+		</div>
+	</div>
+</body>

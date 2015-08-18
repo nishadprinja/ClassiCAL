@@ -17,17 +17,17 @@ ActiveRecord::Schema.define(version: 20150813205132) do
   enable_extension "plpgsql"
 
   create_table "courses", force: :cascade do |t|
-    t.string   "course_name"
-    t.integer  "department_id"
-    t.string   "course_number"
-    t.string   "professor"
-    t.string   "location"
-    t.string   "day"
-    t.datetime "time_start"
-    t.datetime "time_end"
-    t.text     "summary"
-    t.integer  "paired_course_id"
-    t.boolean  "online"
+    t.string  "course_name"
+    t.integer "department_id"
+    t.string  "course_number"
+    t.string  "professor"
+    t.string  "location"
+    t.string  "day"
+    t.string  "time_start"
+    t.string  "time_end"
+    t.text    "summary"
+    t.integer "paired_course_id"
+    t.boolean "online"
   end
 
   create_table "courses_materials", id: false, force: :cascade do |t|

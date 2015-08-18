@@ -1,33 +1,33 @@
-<!-- users view folder will provide functionality to sign up for classiCAL -->
+<body id='sign-up-background'>
+<!-- DIVS ON DIVS ON DIVS ON DIVS MUHFUCKAAAA -->
+  <div id='top-bar'>
+    <div id='top-logo'></div>
+    <div id='login-box'>
+      <%= form_tag '/login' do %>
+        <div id='username'><%= text_field_tag :username, :attr, :placeholder => "Username" %></div>  
+        <div id='password'><%= password_field_tag :password, :attr, :placeholder => "Password"%></div>
+        <div id='submit-login'> <%= submit_tag "Login", :class => "login-button"  %></div>
+      <% end %>
+    </div>
 
-<div class="form">
-<h1>Haven't joined ClassiCAL yet? Sign up here!</h1>
-  <%= form_for @user do |f| %>
+  <div>
+      <div class="sign-up-form">
+        <%= form_for @user do |f| %>
+        Create your account <br><br>
+        <div id='entry-field'><%= f.text_field :first_name, :placeholder => "First name", :class=>'entry-field-class'%></div><br>
 
-  <%= f.label :first_name%><br>
-  <%= f.text_field :first_name%><br>
+        <div id='entry-field' ><%= f.text_field :last_name, :placeholder=>'Last Name', :class=>'entry-field-class'%></div><br>
 
-  <%= f.label :last_name%><br>
-  <%= f.text_field :last_name%><br>
+        <div id='entry-field' ><%= f.text_field :graduation_year, :placeholder=>'Graduation Year', :class=>'entry-field-class'%></div><br>
 
-  <%= f.label :graduation_year%><br>
-  <%= f.text_field :graduation_year%><br>
+        <div id='entry-field' ><%= f.text_field :username, :placeholder=>'Username', :class=>'entry-field-class'%></div><br>
 
-  <%= f.label :username%><br>
-  <%= f.text_field :username%><br>
+        <div id='entry-field' ><%= f.password_field :password, :placeholder=>'Password', :class=>'entry-field-class' %></div><br>
 
-  <%= f.label :password %><br>
-  <%= f.password_field :password %><br>
-
-  <!-- what to call here to get major and minor? -->
-
-  <%= f.label 'confirm your password' %><br>
-  <%= f.password_field :password_confirmation %><br>
-  <br>
-  <%= f.submit "Submit"%><br>
-  
-  <% end %>
-</div>
-
-
-<!-- add a field to add major with drop down of all departments plus one for 'undecided' -->
+        <div id='entry-field' ><%= f.password_field :password_confirmation, :placeholder=>'Password', :class=>'entry-field-class' %></div>
+        <br>
+        <div id='entry-field-submit'><%= f.submit "Submit", :class =>"signup-button" %></div>  <br>
+        <% end %>
+      </div>
+  </div>
+</body>

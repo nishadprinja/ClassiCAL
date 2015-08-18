@@ -4,12 +4,13 @@ Rails.application.routes.draw do
 
     resources :courses, only: [:index]
     get '/deptcourses/:id' => 'courses#department_courses', as: 'deptcourses'
-
+    post '/user_courses' => 'user_courses#create'
+    get '/userscourses' => 'user_courses#users_courses', as: 'userscourses'
     # resources :users, only: [:new, :create, :show, :destroy]
 
     #these are the signup routes. 
     get '/signup' => 'users#new'
-    post 'users' => 'users#create'
+    post '/users' => 'users#create'
 
     get '/login' => 'sessions#new' #renders a login form in the browser
     post '/login' => 'sessions#create' #receives the form and logs in a user in the database with inputs

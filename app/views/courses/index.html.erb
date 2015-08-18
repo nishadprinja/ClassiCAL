@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <body id='courses-background'>
 	<div id='top-bar'>
 		<div id='top-logo'>
@@ -46,3 +47,58 @@
 		</div>
 	</div>
 </body>
+=======
+<!-- 	<div class="header"></div>
+	<div class="footer"></div>
+	<div class="little-line"></div>
+	<div class="black-box">
+		<p><b>Plan a semester you can see, with tools that make sense</b></p>
+	</div> -->
+<!-- MAIN PAGE -->
+<div id='wrap'>
+
+	<!-- LEFT COLUMN, CONTAINS THE SELECT & DRAGABLE EVENTS -->
+	<div id='external-events'>
+		<h4>Draggable Events</h4>
+
+			<!-- DEPARTMENT SELECT MENU -->
+			<select id="dept-select">
+			<% @departments.each do |department| %>
+				<option value="<%=department.id%>"> <%=department.department_name%> </option>
+			<% end %>
+			</select>
+
+				<!-- DIV WHERE COURSES ACTUALLY POPULATE -->
+				<div id="courses"></div>				
+
+					<!-- CHECK-BOX -->
+						<p> 
+							<input type='checkbox' id='drop-remove' checked="checked" style="display: none"/>
+						</p>
+					</div>
+
+						<!-- ACTUAL CALENDAR -->
+						<div id='calendar'></div>
+						<div style='clear:both'></div>
+</div>
+
+<div id="external-events">
+	<div id="users-courses"></div>
+</div>
+
+<button id="save">Save My Courses</button>
+<button id="clear">Clear My Courses</button>
+
+<!-- <input id="save" type="submit" text="save">
+ -->
+  
+
+<!-- after you drag the course into the calendar 
+    you need something on that div to tell you that it belongs to the user OR you need some kind of array in the javascript to store all the course ids that the user has put into the calendar 
+
+    when the user clicks save -  you're going to submit these courses  to the userscourse controller
+    $(this).data('courseid')
+$(function () { 
+});
+-->
+>>>>>>> f33add8fb50c841b60ff7aa06f4f83e6a869d6ee

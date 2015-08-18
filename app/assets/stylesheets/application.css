@@ -27,6 +27,7 @@ font-size: 20px;
 }
 */
 /* ------------- ------------- Background CSS ------------- ------------- */
+<<<<<<< HEAD
 
 /* LOGIN PAGE */
 
@@ -385,3 +386,77 @@ font-size: 20px;
 
 
 
+=======
+
+/* LOGIN PAGE */
+
+#login-background {
+	background-image: url(http://i.imgur.com/S3trUBS.png);
+	background-size: contain;
+	background-repeat: no-repeat;
+	height: 800px;
+}
+
+	#login-form {
+		font-style: italic;
+		font: sans-serif;
+		float: right;
+		right: 10px;
+	    margin-top: 7px;
+	    margin-right: 30px;
+	}
+
+		#username {
+			font-style: italic;
+			text-align: center;
+			font-size: 13px;
+			width: 200px;
+		}
+
+		#password {
+			font-style: italic;
+			text-align: center;
+			width: 200px;
+		}
+
+		#submit-login {
+			font-style: italic;
+		    font: sans-serif;
+			width: 200px;
+		}
+
+		a {
+			color: #a5c292;
+		}
+
+		#signup {
+			color: #a5c292;
+			text-align: center;
+			font-family: sans-serif;
+			font-size: 50px;
+			font-style: italic;
+			height: 100%;
+		/*	margin-left: 218px;
+		*/}
+
+		#actual_signup {
+			position: absolute;
+		    left: 43.8%;
+		    top: 487px;
+		}
+
+/* SIGN UP PAGE */
+
+#sign-up-background {
+	background-image: url(http://i.imgur.com/pTqBLvu.png);
+	background-size: contain;
+	background-repeat: no-repeat;
+	height: 800px;
+}
+
+.sign-up-form {
+    padding-top: 250px;		
+    font-style: italic;
+	font: sans-serif;		
+}
+>>>>>>> f33add8fb50c841b60ff7aa06f4f83e6a869d6ee

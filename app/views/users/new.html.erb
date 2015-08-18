@@ -1,33 +1,35 @@
-<!-- users view folder will provide functionality to sign up for classiCAL -->
+<!-- PAGE SPECIFIC STYLING -->
+<style type="text/css">
+  input { 
+  width: 250px;
+  height: 20px;
+  margin-left: 41%;
+  font-style: italic;
+  text-align: center;
+  font-size: 13px;
+}
+</style>
 
-<div class="form">
-<h1>Haven't joined ClassiCAL yet? Sign up here!</h1>
-  <%= form_for @user do |f| %>
+<div id='sign-up-background'>
+  <div>
+      <div class="sign-up-form">
+        <%= form_for @user do |f| %>
 
-  <%= f.label :first_name%><br>
-  <%= f.text_field :first_name%><br>
+        <div id='entry-field'><%= f.text_field :first_name, :placeholder => "First name"%></div><br>
 
-  <%= f.label :last_name%><br>
-  <%= f.text_field :last_name%><br>
+        <div id='entry-field' ><%= f.text_field :last_name, :placeholder=>'Last Name'%></div><br>
 
-  <%= f.label :graduation_year%><br>
-  <%= f.text_field :graduation_year%><br>
+        <div id='entry-field' ><%= f.text_field :graduation_year, :placeholder=>'Graduation Year'%></div><br>
 
-  <%= f.label :username%><br>
-  <%= f.text_field :username%><br>
+        <div id='entry-field' ><%= f.text_field :username, :placeholder=>'Username'%></div><br>
 
-  <%= f.label :password %><br>
-  <%= f.password_field :password %><br>
+        <div id='entry-field' ><%= f.password_field :password, :placeholder=>'Password' %></div><br>
 
-  <!-- what to call here to get major and minor? -->
-
-  <%= f.label 'confirm your password' %><br>
-  <%= f.password_field :password_confirmation %><br>
-  <br>
-  <%= f.submit "Submit"%><br>
-  
-  <% end %>
+        <div id='entry-field' ><%= f.password_field :password_confirmation, :placeholder=>'Password' %></div>
+        <br>
+        <div><%= f.submit "Submit"%></div>  <br>
+        <% end %>
+      </div>
+  </div>
 </div>
 
-
-<!-- add a field to add major with drop down of all departments plus one for 'undecided' -->

@@ -19,8 +19,6 @@
 //= require moment.min
 //= require fullcalendar
 //= require calendar
-//= require_tree ./templates
 //= require_tree ../../../vendor/assets/javascripts
 //= require_tree .
 //= require application.js
-//= require collections/courses.js

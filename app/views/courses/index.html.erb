@@ -1,10 +1,9 @@
-<% if session[:current_user_id] %>
-	<div class="header"></div>
+<!-- 	<div class="header"></div>
 	<div class="footer"></div>
 	<div class="little-line"></div>
 	<div class="black-box">
 		<p><b>Plan a semester you can see, with tools that make sense</b></p>
-	</div>
+	</div> -->
 <!-- MAIN PAGE -->
 <div id='wrap'>
 
@@ -22,11 +21,9 @@
 				<!-- DIV WHERE COURSES ACTUALLY POPULATE -->
 				<div id="courses"></div>				
 
-					<!-- DUMMY EVENT W/CHECK-BOX -->
-					<div class='fc-event'>My Event 1</div>
-						<p>
-							<input type='checkbox' id='drop-remove' />
-							<label for='drop-remove'>remove after drop</label>
+					<!-- CHECK-BOX -->
+						<p> 
+							<input type='checkbox' id='drop-remove' checked="checked" style="display: none"/>
 						</p>
 					</div>
 
@@ -34,10 +31,16 @@
 						<div id='calendar'></div>
 						<div style='clear:both'></div>
 </div>
-<% end %>
 
-	
+<div id="external-events">
+	<div id="users-courses"></div>
+</div>
 
+<button id="save">Save My Courses</button>
+<button id="clear">Clear My Courses</button>
+
+<!-- <input id="save" type="submit" text="save">
+ -->
   
 
 <!-- after you drag the course into the calendar 

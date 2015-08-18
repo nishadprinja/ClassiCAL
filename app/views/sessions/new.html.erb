@@ -1,9 +1,26 @@
-<h1>Login</h1>
+<!-- PAGE SPECIFIC STYLING -->
+<style type="text/css">
+  input { 
+  width: 206px;
+}
+</style>
 
-<%= form_tag '/login' do %>
-	Username: <%= text_field_tag :username %>
-	Password: <%= password_field_tag :password %>
-	<%= submit_tag "Submit" %>
+<div id='login-background'>
 
-<% end %>
+	<div id='login-form'>
+		<%= form_tag '/login' do %>
+			<div id='username'><%= text_field_tag :username %></div>  
+			<div id='password'><%= password_field_tag :password %></div>
+			<div id='submit-login'> <%= submit_tag "Login" %></div>
+		<% end %>
+	</div>
 
+	<div id='signup'>
+		<% if current_user %>
+			Signed in as <%= current_user.username %> | <%= link_to 'Logout', '/logout', method: :delete %>
+		<% else %>
+			<div id='actual_signup'><%= link_to 'Sign Up', '/signup', :class=> "signupp" %></div>	
+		<% end %>
+	</div>
+
+</div>

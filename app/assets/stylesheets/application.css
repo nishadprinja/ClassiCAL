@@ -14,7 +14,7 @@
  *= require_self
  */
 
- .form {
+ /*.form {
   width: 500px;
   margin-left: 24%;
   margin-top: 100px;
@@ -25,68 +25,336 @@
 h1 {
 font-size: 20px;
 }
-
+*/
 /* ------------- ------------- Background CSS ------------- ------------- */
-.body-style {
-	background: url("Classroom-DEETsm.jpg") no-repeat center center fixed;
+
+/* LOGIN PAGE */
+
+#login-background {
+	position: relative;
+	background-image: url(http://i.imgur.com/zXsHNfg.png?1);
 	background-size: cover;
-	position: absolute;
-	z-index: -500px;
-	padding: 0;
-	margin: 0;
-/*	setting the top, right, bottom, and left properties of a relatively-positioned element, adjusts it away from its normal position. "Normal" = top: 0px; left: 0px;  
-*/	/*background-repeat: no-repeat;*/
-	width: 1430px;
-	height: 1286px;
+	background-repeat: no-repeat;
+	margin: auto;
 }
 
-/*.header {
-	background-color: white;
-	position: fixed;
+#top-bar {
 	width: 100%;
 	height: 75px;
-	top: 0;
-	left: 0;
-	margin: 0;
+	background-color: rgba(255,255,255,1);
 }
-.footer {
-	position: fixed;
-	background-color: white;
-	width: 100%;
+
+#top-logo {
+	right: 135px;
+	position: absolute;	
+	background-image: url(http://i.imgur.com/sT3y7qZ.png);
+	background-repeat: no-repeat;
 	height: 75px;
-	bottom: 0px;
-	left: 0px;
-}*/
-
-.little-line {
-	position: fixed;
-	background-color: black;
 	width: 100%;
-	height: 2px;
-	bottom: 75px;
-	left: 0px;
+	margin: auto;
+	transform: scale(0.8, 0.8);
+	background-size: contain;
 }
 
-.black-box {
+#login-box {
+	background-color: rgba(0, 0, 0, .5);
+	width: 200px;
+	height: 75px;
+	font-style: italic;
+	font: sans-serif;
+	float: right;
+	padding-right: 50px;
+}
+
+#username {
+	color: black;
+	border-color: transparent;
+	position: relative;
+	margin: 5px;
+	font-style: italic;
+	text-align: center;
+	font-size: 13px;
+	width: 150px;
+}
+
+#password {
+	color: black;
+	border-color: transparent;
+	position: relative;
+	margin: 5px;
+	font-style: italic;
+	text-align: center;
+	font-size: 13px;
+	width: 150px;
+}
+
+#submit-login {
+	font-style: italic;
+	font: sans-serif;
+	margin-right: -50px;
+    margin-top: -50px;
+}
+
+.login-button:hover {
 	color: white;
-	background-color: black;
-	position: fixed;
-	margin: 0 auto;
-	width: 28%;
-	height: 10%;
-	font-size: 25px;
-	opacity: 0.85;
-	top: 50%;
-	left: 50%;
+	background-color: rgba(165,194,146,1);
 }
 
-/*#outPopUp{
-     position:absolute;
-     width:300px;
-     height:200px;
-     z-index:15;
-     top:50%;
-     left:50%;
-     margin:-100px 0 0 -150px;
-     background:red;
-}*/
+.login-button {
+	color: black;
+	font-style: italic;
+	background-color: white;
+	font: sans-serif;
+	position: relative;
+	margin-right: -175px;	
+	height: 75px;
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+    outline:none;
+    top: -29px;
+    width: 75px;
+    font-size: 16px;
+}
+
+.login-class {
+	color: black;
+    border-color: transparent;
+    position: relative;
+    margin: 5px;
+    font-style: italic;
+    text-align: center;
+    font-size: 13px;
+    width: 150px;
+
+}
+
+#slogan {
+	position: fixed;
+	background-position: center; 
+	background-image: url(http://i.imgur.com/UmrBiG8.png);
+	background-repeat: no-repeat;
+	width: 100%;
+	margin-top: 250px;
+	height: 200px;
+	transform: scale(0.7, 0.7);
+	background-size: contain;
+}
+
+#signup-box:hover {
+	color: white;
+	background-color: rgba(165,194,146,1);
+}
+
+#signup-box {
+	font-style: italic;
+	font: sans-serif;
+	font-style: italic;
+	background-color: rgba(255, 255, 255, .5);
+	font: sans-serif;
+	color: black;
+	position: relative;
+	height: 50px;
+	width: 150px;
+	margin: auto;
+	top: 400px;
+}
+
+.signupp:hover {
+	color: white;
+}
+
+.signupp {
+	color: black;
+	font-size: 35px;
+	text-align: center;
+}
+
+#signup-button {
+	top:10px;
+}
+
+/*SIGN UP SHIT*/
+
+#sign-up-background {
+	position: relative;
+	background-image: url(http://i.imgur.com/zXsHNfg.png?1);
+	background-size: cover;
+	background-repeat: no-repeat;
+	margin: auto;
+}
+
+.sign-up-form {
+	font-style: italic;
+    text-align: center;
+    font-size: 25px;
+	color: rgba(165,194,146,1);
+	position: relative;
+	padding-top: 10px;
+	top: 180px;	
+	position: relative;
+	margin: auto;
+	background-color: rgba(1, 1, 1, .6);
+	width: 350px;
+}
+
+.new_user{
+	position: relative;
+}
+
+#entry-field {
+	color: black;
+	margin: 5px;
+    border-color: transparent;
+    position: relative;
+    font-style: italic;
+    text-align: center;
+    font-size: 13px;
+}
+
+.signup-button:hover {
+		color: white;
+	background-color: rgba(165,194,146,1);
+}
+
+.signup-button {
+	color: black;
+    font-style: italic;
+    background-color: white;
+    font: sans-serif;
+    position: relative;
+    background-repeat: no-repeat;
+    border: none;
+    cursor: pointer;
+    overflow: hidden;
+    outline: none;
+    width: 150px;
+    font-size: 16px;
+    height: 50px;
+}
+
+.entry-field-class {
+	color: black;
+    border-color: transparent;
+    position: relative;
+    font-style: italic;
+    text-align: center;
+    font-size: 15px;
+    width: 150px;
+}
+
+/* MAIN COURSES PAGE */
+
+#courses-background {
+	background-image: url(http://i.imgur.com/Qfq65TL.jpg);
+	position: relative;
+	background-size: cover;
+	background-repeat: no-repeat;
+	margin: auto;
+}
+
+#top-bar {
+	width: 100%;
+	height: 75px;
+	background-color: rgba(1, 1, 1, .6);
+}
+
+#top-logo {
+	right: 135px;
+	position: absolute;	
+	background-image: url(http://i.imgur.com/sT3y7qZ.png);
+	background-repeat: no-repeat;
+	height: 75px;
+	width: 100%;
+	margin: auto;
+	transform: scale(0.8, 0.8);
+	background-size: contain;
+
+}
+
+#everything-courses {
+	position: relative;
+	float: center;
+	margin: auto;
+	width: 60%;
+	margin-top: 90px;
+}
+
+#save-box {
+	width: 200px;
+	height: 120px;
+	margin: auto;
+}
+
+#save {
+	color: white;
+}
+#save {
+	position: relative;
+	margin: 5px;
+	border-color: transparent;
+	font-style: italic;
+    text-align: center;
+    font-size: 20px;
+	color: rgba(165,194,146,1);;
+	background-color: rgba(1, 1, 1, .6);
+	width: 200px;
+	height: 50px;
+}
+
+#clear {
+	color: white;
+}
+
+#clear {
+	position: relative;
+	margin: 5px;
+	border-color: transparent;
+	font-style: italic;
+    text-align: center;
+    font-size: 20px;
+	color: rgba(165,194,146,1);;
+	background-color: rgba(1, 1, 1, .6);
+	width: 200px;
+	height: 50px;
+}
+
+#dept-select {
+	float: center;
+	margin: auto;
+	width: 100%;
+	text-align: center;
+	height: 20px;
+}
+
+
+.logout-button {
+	color: rgba(165,194,146,1);
+}
+
+#gtfo {
+	color: white;
+}
+
+#gtfo {
+
+	position: relative;
+	margin: 5px;
+	border-color: transparent;
+	font-style: italic;
+    text-align: center;
+    font-size: 20px;
+	background-color: rgba(1, 1, 1, .6);
+	width: 200px;
+	height: 50px;
+}
+
+#users-courses {
+	float: right;
+}
+
+#calendar { 
+	color: white;
+	background-color: rgba(1, 1, 1, .6);
+}

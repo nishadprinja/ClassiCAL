@@ -6,7 +6,7 @@ class SessionsController < ApplicationController
 		#if the user exists AND the password entered is correct
   		if user && user.authenticate(params[:password])
     		session[:current_user_id] = user.id #Save the user id inside the browser cookie. How to keep them logged in when they are using the site/program
-    		redirect_to '/'
+    		redirect_to '/courses'
   		else
     		redirect_to '/login' #also enter message that their login info was incorrect
   		end

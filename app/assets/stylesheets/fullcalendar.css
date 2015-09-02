@@ -1,4 +1,4 @@
-/*!
+p/*!
  * FullCalendar v2.3.2 Stylesheet
  * Docs & License: http://fullcalendar.io/
  * (c) 2015 Adam Shaw
@@ -46,7 +46,6 @@ body .fc { /* extra precedence to overcome jqui */
 }
 
 .fc-unthemed .fc-today {
-	background: #fcf8e3;
 }
 
 .fc-highlight { /* when user is selecting cells */

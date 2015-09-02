@@ -1,50 +1,48 @@
-<% if session[:current_user_id] %>
-	<div class="header"></div>
-	<div class="footer"></div>
-	<div class="little-line"></div>
-	<div class="black-box">
-		<p><b>Plan a semester you can see, with tools that make sense</b></p>
-	</div>
-<!-- MAIN PAGE -->
-<div id='wrap'>
+<body id='courses-background'>
+	<div id='top-bar'>
+		<div id='top-logo'>
+			<div id='everything-courses'>
+				<div id='wrap'>
 
-	<!-- LEFT COLUMN, CONTAINS THE SELECT & DRAGABLE EVENTS -->
-	<div id='external-events'>
-		<h4>Draggable Events</h4>
+					<!-- LEFT COLUMN, CONTAINS THE SELECT & DRAGABLE EVENTS -->
+					<div id='external-events'>
+						<h4>Draggable Events</h4>
 
-			<!-- DEPARTMENT SELECT MENU -->
-			<select id="dept-select">
-			<% @departments.each do |department| %>
-				<option value="<%=department.id%>"> <%=department.department_name%> </option>
-			<% end %>
-			</select>
+							<!-- DEPARTMENT SELECT MENU -->
+							<select id="dept-select">
+							<% @departments.each do |department| %>
+								<option value="<%=department.id%>"> <%=department.department_name%> </option>
+							<% end %>
+							</select>
 
-				<!-- DIV WHERE COURSES ACTUALLY POPULATE -->
-				<div id="courses"></div>				
+								<!-- DIV WHERE COURSES ACTUALLY POPULATE -->
+								<div id="courses"></div>				
 
-					<!-- DUMMY EVENT W/CHECK-BOX -->
-					<div class='fc-event'>My Event 1</div>
-						<p>
-							<input type='checkbox' id='drop-remove' />
-							<label for='drop-remove'>remove after drop</label>
-						</p>
+									<!-- CHECK-BOX -->
+										<p> 
+											<input type='checkbox' id='drop-remove' checked="checked" style="display: none"/>
+										</p>
+									</div>
+
+										<!-- ACTUAL CALENDAR -->
+										<div id='calendar'></div>
+										<div style='clear:both'></div>
+				</div>
+				<div>
+					<div id="users-courses">
+						<div id='save-box'>
+							<button id="save">Save My Courses</button>
+						</div>
+						<div>
+							<button id="clear">Clear My Courses</button>
+						</div>
+						<div id='gtfo'>
+							<%= link_to 'Logout', '/logout', method: :delete, :class=>'logout-button' %>
+						</div> 
 					</div>
-
-						<!-- ACTUAL CALENDAR -->
-						<div id='calendar'></div>
-						<div style='clear:both'></div>
-</div>
-<% end %>
-
-	
-
-  
-
-<!-- after you drag the course into the calendar 
-    you need something on that div to tell you that it belongs to the user OR you need some kind of array in the javascript to store all the course ids that the user has put into the calendar 
-
-    when the user clicks save -  you're going to submit these courses  to the userscourse controller
-    $(this).data('courseid')
-$(function () { 
-});
--->
+				</div>
+				
+			</div>
+		</div>
+	</div>
+</body>

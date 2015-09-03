@@ -27,6 +27,10 @@ font-size: 20px;
 }
 */
 /* ------------- ------------- Background CSS ------------- ------------- */
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 5ecf2dce93e23b79e645bd44506f74e2169fc82e
 
 /* LOGIN PAGE */
 
@@ -59,6 +63,7 @@ font-size: 20px;
 #login-box {
 	background-color: rgba(0, 0, 0, .5);
 	width: 200px;
+<<<<<<< HEAD
 	height: 75px;
 	font-style: italic;
 	font: sans-serif;
@@ -108,6 +113,57 @@ font-size: 20px;
 	position: relative;
 	margin-right: -175px;	
 	height: 75px;
+=======
+	height: 75px;
+	font-style: italic;
+	font: sans-serif;
+	float: right;
+	padding-right: 50px;
+}
+
+#username {
+	color: black;
+	border-color: transparent;
+	position: relative;
+	margin: 5px;
+	font-style: italic;
+	text-align: center;
+	font-size: 13px;
+	width: 150px;
+}
+
+#password {
+	color: black;
+	border-color: transparent;
+	position: relative;
+	margin: 5px;
+	font-style: italic;
+	text-align: center;
+	font-size: 13px;
+	width: 150px;
+}
+
+#submit-login {
+	font-style: italic;
+	font: sans-serif;
+	margin-right: -50px;
+    margin-top: -50px;
+}
+
+.login-button:hover {
+	color: white;
+	background-color: rgba(165,194,146,1);
+}
+
+.login-button {
+	color: black;
+	font-style: italic;
+	background-color: white;
+	font: sans-serif;
+	position: relative;
+	margin-right: -175px;	
+	height: 75px;
+>>>>>>> 5ecf2dce93e23b79e645bd44506f74e2169fc82e
     background-repeat:no-repeat;
     border: none;
     cursor:pointer;
@@ -117,6 +173,7 @@ font-size: 20px;
     width: 75px;
     font-size: 16px;
 }
+<<<<<<< HEAD
 
 .login-class {
 	color: black;
@@ -130,6 +187,21 @@ font-size: 20px;
 
 }
 
+=======
+
+.login-class {
+	color: black;
+    border-color: transparent;
+    position: relative;
+    margin: 5px;
+    font-style: italic;
+    text-align: center;
+    font-size: 13px;
+    width: 150px;
+
+}
+
+>>>>>>> 5ecf2dce93e23b79e645bd44506f74e2169fc82e
 #slogan {
 	position: fixed;
 	background-position: center; 
@@ -247,7 +319,10 @@ font-size: 20px;
 /* MAIN COURSES PAGE */
 
 #courses-background {
+<<<<<<< HEAD
 	background-image: url(http://i.imgur.com/Qfq65TL.jpg);
+=======
+>>>>>>> 5ecf2dce93e23b79e645bd44506f74e2169fc82e
 	position: relative;
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -330,7 +405,12 @@ font-size: 20px;
 
 
 .logout-button {
+<<<<<<< HEAD
 	color: rgba(165,194,146,1);
+=======
+
+	color: rgba(165,194,146,1);;
+>>>>>>> 5ecf2dce93e23b79e645bd44506f74e2169fc82e
 }
 
 #gtfo {
@@ -354,7 +434,115 @@ font-size: 20px;
 	float: right;
 }
 
+<<<<<<< HEAD
 #calendar { 
 	color: white;
 	background-color: rgba(1, 1, 1, .6);
 }
+=======
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+=======
+
+/* LOGIN PAGE */
+
+#login-background {
+	background-image: url(http://i.imgur.com/S3trUBS.png);
+	background-size: contain;
+	background-repeat: no-repeat;
+	height: 800px;
+}
+
+	#login-form {
+		font-style: italic;
+		font: sans-serif;
+		float: right;
+		right: 10px;
+	    margin-top: 7px;
+	    margin-right: 30px;
+	}
+
+		#username {
+			font-style: italic;
+			text-align: center;
+			font-size: 13px;
+			width: 200px;
+		}
+
+		#password {
+			font-style: italic;
+			text-align: center;
+			width: 200px;
+		}
+
+		#submit-login {
+			font-style: italic;
+		    font: sans-serif;
+			width: 200px;
+		}
+
+		a {
+			color: #a5c292;
+		}
+
+		#signup {
+			color: #a5c292;
+			text-align: center;
+			font-family: sans-serif;
+			font-size: 50px;
+			font-style: italic;
+			height: 100%;
+		/*	margin-left: 218px;
+		*/}
+
+		#actual_signup {
+			position: absolute;
+		    left: 43.8%;
+		    top: 487px;
+		}
+
+/* SIGN UP PAGE */
+
+#sign-up-background {
+	background-image: url(http://i.imgur.com/pTqBLvu.png);
+	background-size: contain;
+	background-repeat: no-repeat;
+	height: 800px;
+}
+
+.sign-up-form {
+    padding-top: 250px;		
+    font-style: italic;
+	font: sans-serif;		
+}
+>>>>>>> f33add8fb50c841b60ff7aa06f4f83e6a869d6ee
+>>>>>>> 5ecf2dce93e23b79e645bd44506f74e2169fc82e

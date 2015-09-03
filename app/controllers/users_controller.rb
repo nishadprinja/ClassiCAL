@@ -12,7 +12,7 @@ before_action :authenticate, except: [:new, :create]
 		@user = User.new(user_params)
 		if @user.save  
 			session[:current_user_id] = @user.id
-			redirect_to '/', notice: 'Account created successfully' #root path is the login page
+			redirect_to '/courses', notice: 'Account created successfully' #root path is the login page
 		else
 			flash[:error] = 'Username or password is incorrect'
 			redirect_to '/signup' # 'users#new' path

@@ -26,4 +26,3 @@ User.create({first_name: "Grace",
 	username: "ghackett",
 	graduation_year: 2017
 })
-binding.pry

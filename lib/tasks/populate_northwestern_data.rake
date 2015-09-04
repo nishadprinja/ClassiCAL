@@ -1,6 +1,5 @@
 require "rubygems"
 require 'mechanize'
-require 'pry'
 require "#{Rails.root}/app/helpers/application_helper"
 include ApplicationHelper
 
